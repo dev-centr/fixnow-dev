@@ -1,5 +1,5 @@
 import { A, useLocation } from "@solidjs/router";
-import { Search, Clock, Rocket, Code, LogIn } from "lucide-solid";
+import { Search, Clock, Rocket, Code, LogIn, BookOpen } from "lucide-solid";
 import { createSignal, onMount } from "solid-js";
 
 export default function Nav() {
@@ -30,6 +30,9 @@ export default function Nav() {
         <div class="hidden md:flex items-center gap-8 font-medium">
           <A href="/browse" class={`transition-colors flex items-center gap-2 ${active("/browse")}`}>
             <Search size={18} /> Browse
+          </A>
+          <A href="/docs" class={`transition-colors flex items-center gap-2 ${active("/docs")}`}>
+            <BookOpen size={18} /> Documentation
           </A>
           <A href="/metrics" class={`transition-colors flex items-center gap-2 ${active("/metrics")}`}>
             <Rocket size={18} /> High Tech Value
