@@ -15,7 +15,7 @@
     "date-fns": "^4.1.0",
     "lucide-solid": "^1.7.0",
     "solid-js": "^1.9.5",
-    "vite": "^7.0.0"
+    "vite": "^7.3.5"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.0.7",
