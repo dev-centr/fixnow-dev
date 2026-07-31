@@ -1,0 +1,20 @@
+= Docs hub integration and org transfer
+:description: Moved FixNow into Dev-Centr and published Antora docs on the org hub.
+
+== Summary
+
+FixNow is pressure-driven issue tracking for high-value stagnated work.
+It belongs with Dev-Centr developer tooling, so the repository was transferred to the `dev-centr` organization and wired into the shared Antora documentation hub.
+
+== Changes
+
+* Remote ownership: `AMDphreak/fixnow-dev` → `dev-centr/fixnow-dev`.
+* Local checkout path: `github.com/AMDphreak/fixnow-dev` → `github.com/dev-centr/fixnow-dev`.
+* New Antora tree: `docs/antora.yml` plus Introduction, Getting Started, AI Evaluation, API Reference, and Security & Verification.
+* Hub playbooks and portal pages updated to aggregate the component at `/fixnow-dev/`.
+* README converted to AsciiDoc with a Changelog link.
+
+== Follow-ups
+
+* Push docs commits so the production playbook (`build:online`) can fetch them.
+* Finish durable registration storage so timer badges resolve real deadlines by id.

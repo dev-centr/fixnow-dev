@@ -1,0 +1,66 @@
+= API Reference
+:navtitle: API Reference
+:description: HTTP endpoints for issue registration and countdown badges.
+
+FixNow exposes SolidStart server routes under `/api`.
+
+== `POST /api/register`
+
+Registers an issue URL for evaluation.
+
+=== Request body
+
+[source,json]
+----
+{
+  "url": "https://github.com/owner/repo/issues/123",
+  "dueDate": "2026-08-30T00:00:00.000Z"
+}
+----
+
+=== Behavior
+
+. Parses the URL (GitHub `issues` and `pull` paths today).
+. Fetches issue metadata from the GitHub API.
+. Scores the description with Gemini (see xref:ai-evaluation.adoc[AI Evaluation]).
+. Returns metadata plus `aiScore`, `aiReasoning`, `dueDate`, and `registeredAt`.
+
+=== Responses
+
+* `200` — JSON evaluation payload
+* `400` — unsupported provider / bad URL shape (non-GitHub today)
+* `404` — issue not found or fetch failed
+
+NOTE: Persistence to a durable store is not fully wired yet; the handler currently logs the registration result after evaluation.
+
+=== Example
+
+[source,bash]
+----
+curl -X POST https://example.com/api/register \
+  -H "Content-Type: application/json" \
+  -d '{"url":"https://github.com/actions/toolkit/issues/827","dueDate":"2026-05-01T00:00:00Z"}'
+----
+
+== `GET /api/timer/\{id}`
+
+Returns a live SVG countdown badge (`image/svg+xml`) suitable for embedding in Markdown:
+
+[source,markdown]
+----
+![deadline](https://example.com/api/timer/1)
+----
+
+Response headers include `Cache-Control: no-cache, no-store, must-revalidate` so badges stay fresh when embedded.
+
+NOTE: The timer route currently uses a development deadline constant while durable issue storage is completed.
+Wire `\{id}` to stored `dueDate` values before treating badges as production-authoritative.
+
+== URL parsing
+
+Supported today:
+
+* `https://github.com/\{owner}/\{repo}/issues/\{number}`
+* `https://github.com/\{owner}/\{repo}/pull/\{number}`
+
+GitLab and Bitbucket parsing are reserved in types but not implemented yet.

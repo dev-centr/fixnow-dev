@@ -1,0 +1,59 @@
+= Getting Started
+:navtitle: Getting Started
+:description: Install, configure, and run FixNow locally.
+
+== Requirements
+
+* Node.js 22 or newer
+* link:https://pnpm.io/[pnpm] (via Corepack is fine)
+* A Google AI Studio / Gemini API key for live scoring
+* Optional GitHub token for higher API rate limits when fetching issues
+
+== Clone and install
+
+[source,bash]
+----
+git clone https://github.com/dev-centr/fixnow-dev.git
+cd fixnow-dev
+corepack enable
+pnpm install
+----
+
+== Environment
+
+Create a `.env` file in the repository root:
+
+[source,env]
+----
+GOOGLE_GENERATIVE_AI_API_KEY=YOUR_API_KEY
+GITHUB_TOKEN=YOUR_GH_TOKEN
+----
+
+Without `GOOGLE_GENERATIVE_AI_API_KEY`, value scoring falls back to a neutral placeholder score.
+Without `GITHUB_TOKEN`, public GitHub issue fetches still work subject to anonymous rate limits.
+
+== Development
+
+[source,bash]
+----
+pnpm dev
+----
+
+== Production build
+
+[source,bash]
+----
+pnpm build
+pnpm start
+----
+
+Deployment is configured for Netlify (`netlify.toml`).
+The stack is SolidStart (Vinxi) with Tailwind CSS v4.
+
+== First registration
+
+. Open the app and go to *Register*.
+. Paste a GitHub issue URL such as `https://github.com/owner/repo/issues/123`.
+. Submit — the server fetches issue metadata, runs AI scoring, and returns the evaluation payload.
+
+Persistence is still evolving; see xref:api.adoc[API Reference] for current behavior.

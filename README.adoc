@@ -1,0 +1,66 @@
+= FixNow.dev
+:toc:
+
+Pressure-driven issue tracking for high-value, stagnated features.
+
+FixNow combines Gemini assessments with public countdown badges so critical ignored issues stay visible.
+
+== Features
+
+* *AI-rated technical value* — scores issues from 0–100 for complexity and impact.
+* *Dynamic image proxy* — SVG countdown badges via `/api/timer/{id}` for READMEs and chat.
+* *Resolution verification* — AI audit of closures (implemented vs ignored vs alternate).
+* *SolidStart UI* — SolidStart + Tailwind CSS v4.
+
+== Documentation
+
+Canonical docs live on the Dev-Centr Antora hub:
+
+* link:https://docs.devcentr.org/fixnow-dev/[docs.devcentr.org/fixnow-dev]
+* Local sources: link:docs/README.adoc[`docs/`] (Antora component)
+
+The deployed app also has an in-product `/docs` area for quick reference.
+
+== Tech stack
+
+* Framework: link:https://start.solidjs.com[SolidStart (Vinxi)]
+* Styling: link:https://tailwindcss.com[Tailwind CSS v4]
+* AI: link:https://aistudio.google.com/[Google Gemini 1.5 Flash]
+* Package manager: link:https://pnpm.io/[pnpm]
+* Deployment: link:https://netlify.com/[Netlify]
+
+== Setup
+
+. Clone and install
++
+[source,bash]
+----
+corepack enable
+pnpm install
+----
+
+. Create `.env`
++
+[source,env]
+----
+GOOGLE_GENERATIVE_AI_API_KEY=YOUR_API_KEY
+GITHUB_TOKEN=YOUR_GH_TOKEN
+----
+
+. Develop
++
+[source,bash]
+----
+pnpm dev
+----
+
+. Production build
++
+[source,bash]
+----
+pnpm build
+----
+
+== Changelog
+
+See link:CHANGELOG.adoc[CHANGELOG.adoc] for the project timeline.

@@ -1,0 +1,34 @@
+= FixNow
+:navtitle: Introduction
+:description: Pressure-driven issue tracking for high-value, stagnated features.
+
+FixNow (fixnow.dev) is an AI-assisted public-pressure platform for high-value software issues that stall.
+Where most trackers optimize project management, FixNow focuses on *technical demand verification* and *visible deadlines*.
+
+== What it does
+
+* Scores issue text with Gemini for engineering value (0–100).
+* Starts a public countdown tied to a registered deadline.
+* Serves embeddable SVG countdown badges for READMEs and chat.
+* Audits closures with AI to distinguish real fixes from dismissals.
+
+== How it works
+
+. *Register* — paste a GitHub issue or pull request URL (GitLab planned).
+. *Evaluate* — Gemini 1.5 Flash scores the issue and returns short reasoning.
+. *Countdown* — a public deadline and timer badge are associated with the registration.
+. *Audit* — when an issue closes, comments can be classified as implemented, ignored, or an efficacious alternate.
+
+== Design intent
+
+The goal is not to shame maintainers.
+It is to keep high-value feedback visible in a noisy issue landscape so urgency matches impact.
+
+== Related docs
+
+* xref:getting-started.adoc[Getting Started] — run and configure the app locally.
+* xref:ai-evaluation.adoc[AI Evaluation] — scoring and resolution prompts.
+* xref:api.adoc[API Reference] — register and timer endpoints.
+* xref:security.adoc[Security & Verification] — tokens, caching, and audit caveats.
+
+Source: link:https://github.com/dev-centr/fixnow-dev[dev-centr/fixnow-dev].

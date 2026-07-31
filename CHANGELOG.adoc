@@ -1,0 +1,12 @@
+= Changelog
+:toc:
+
+Timeline of notable FixNow changes.
+Detailed notes live under link:changelog-details/[changelog-details/].
+
+== 2026-07-30 — Docs hub integration and org transfer
+
+link:changelog-details/2026-07-30%20-%20Docs%20hub%20integration%20and%20org%20transfer.adoc[Details]
+
+* Transferred repository from `AMDphreak/fixnow-dev` to `dev-centr/fixnow-dev`.
+* Added Antora component under `docs/` and registered it on docs.devcentr.org.

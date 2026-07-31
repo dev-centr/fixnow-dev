@@ -1,0 +1,31 @@
+= Security & Verification
+:navtitle: Security & Verification
+:description: Secrets handling, abuse surface, and resolution verification caveats.
+
+== Secrets
+
+* Keep `GOOGLE_GENERATIVE_AI_API_KEY` and `GITHUB_TOKEN` in environment variables or a secrets manager — never commit them.
+* Prefer least-privilege GitHub tokens (public read is enough for open issues).
+* Rotate keys if they appear in logs or shared screenshots.
+
+== Trust boundaries
+
+* *Issue text is untrusted.* Prompts include third-party issue bodies and comments. Treat model output as data, not instructions for privileged actions.
+* *Scores are advisory.* Do not gate merges, bans, or billing solely on Gemini scores.
+* *SVG badges are public.* Anyone who knows an id can fetch the timer image; do not encode secrets in badge URLs.
+
+== Resolution verification
+
+When an issue is marked resolved, FixNow can ask Gemini to classify comments as implemented, ignored, or an efficacious alternate (see xref:ai-evaluation.adoc[AI Evaluation]).
+
+Limitations:
+
+* Models can misread sarcasm, partial fixes, or “won’t fix” rationales.
+* Comment samples may be incomplete if fetch limits truncate threads.
+* Categories should be shown as AI judgment with human override available.
+
+== Operational notes
+
+* Timer responses disable caching so embeds refresh; this increases request volume — rate-limit or CDN carefully in production.
+* Anonymous GitHub API use is rate-limited; set `GITHUB_TOKEN` for sustained registration traffic.
+* Prefer authenticated admin surfaces before allowing bulk registration that could spam maintainers.

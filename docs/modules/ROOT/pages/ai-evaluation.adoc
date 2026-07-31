@@ -1,0 +1,39 @@
+= AI Evaluation
+:navtitle: AI Evaluation
+:description: How FixNow scores issues and audits resolutions with Gemini.
+
+FixNow uses Google Gemini 1.5 Flash for two jobs: *value scoring* at registration time, and *resolution auditing* when judging whether a closed issue was actually fixed.
+
+== Value score (0–100)
+
+On registration, the issue body is sent to Gemini with instructions to return JSON:
+
+[source,json]
+----
+{ "score": 0, "reasoning": "one sentence" }
+----
+
+Guidance given to the model:
+
+* *100* — extremely high value (critical bug, large performance win, essential feature)
+* *0* — trivial or low impact
+
+If the API key is missing, the app returns score `50` with reasoning that the key is not configured.
+On model or parse failure, the score falls back to `0`.
+
+== Resolution audit
+
+`evaluateResolution` classifies comment threads into one of:
+
+* `implemented` — the requested change landed
+* `ignored` — closed without a real fix
+* `efficacy_alternate` — a different but effective solution was accepted
+* `unknown` — key missing or evaluation failed
+
+The classifier prompt asks for the category name only.
+Treat outputs as assistive signals, not authoritative project management truth.
+
+== Model choice
+
+Gemini 1.5 Flash is used for low latency on first-pass assessments suitable for registration UX.
+Upgrade paths (larger models, multi-signal scoring with reactions and linked PRs) can be layered later without changing the public registration flow.

@@ -1,0 +1,7 @@
+= FixNow Documentation
+
+This directory is the Antora component for FixNow.
+It is aggregated by the link:https://github.com/dev-centr/docs[Dev-Centr docs hub] and published at link:https://docs.devcentr.org/fixnow-dev/[docs.devcentr.org/fixnow-dev].
+
+The SolidStart app also exposes an in-product `/docs` route for the live site.
+Prefer this Antora tree as the canonical written documentation.
