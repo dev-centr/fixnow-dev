@@ -1,18 +1,42 @@
+ifndef::env-github[:icons: font]
+:toc: preamble
+:toclevels: 2
+:sectanchors:
+
+ifndef::env-github[]
+image:https://img.shields.io/github/contributors/dev-centr/fixnow-dev.svg?style=for-the-badge[Contributors,link=https://github.com/dev-centr/fixnow-dev/graphs/contributors]
+image:https://img.shields.io/github/forks/dev-centr/fixnow-dev.svg?style=for-the-badge[Forks,link=https://github.com/dev-centr/fixnow-dev/network/members]
+image:https://img.shields.io/github/stars/dev-centr/fixnow-dev.svg?style=for-the-badge[Stars,link=https://github.com/dev-centr/fixnow-dev/stargazers]
+image:https://img.shields.io/github/issues/dev-centr/fixnow-dev.svg?style=for-the-badge[Issues,link=https://github.com/dev-centr/fixnow-dev/issues]
+endif::[]
+
+ifdef::env-github[]
+image:https://img.shields.io/github/contributors/dev-centr/fixnow-dev.svg?style=for-the-badge[Contributors]
+image:https://img.shields.io/github/forks/dev-centr/fixnow-dev.svg?style=for-the-badge[Forks]
+image:https://img.shields.io/github/stars/dev-centr/fixnow-dev.svg?style=for-the-badge[Stars]
+image:https://img.shields.io/github/issues/dev-centr/fixnow-dev.svg?style=for-the-badge[Issues]
+endif::[]
+
 = FixNow.dev
-:toc:
 
 Pressure-driven issue tracking for high-value, stagnated features.
 
+link:https://docs.devcentr.org/fixnow-dev/[Explore the docs] ·
+link:https://github.com/dev-centr/fixnow-dev/issues[Report Bug] ·
+link:https://github.com/dev-centr/fixnow-dev/issues[Request Feature]
+
+== About The Project
+
 FixNow combines Gemini assessments with public countdown badges so critical ignored issues stay visible.
 
-== Features
+=== Features
 
 * *AI-rated technical value* — scores issues from 0–100 for complexity and impact.
 * *Dynamic image proxy* — SVG countdown badges via `/api/timer/{id}` for READMEs and chat.
 * *Resolution verification* — AI audit of closures (implemented vs ignored vs alternate).
 * *SolidStart UI* — SolidStart + Tailwind CSS v4.
 
-== Documentation
+=== Documentation
 
 Canonical docs live on the Dev-Centr Antora hub:
 
@@ -21,15 +45,7 @@ Canonical docs live on the Dev-Centr Antora hub:
 
 The deployed app also has an in-product `/docs` area for quick reference.
 
-== Tech stack
-
-* Framework: link:https://start.solidjs.com[SolidStart (Vinxi)]
-* Styling: link:https://tailwindcss.com[Tailwind CSS v4]
-* AI: link:https://aistudio.google.com/[Google Gemini 1.5 Flash]
-* Package manager: link:https://pnpm.io/[pnpm]
-* Deployment: link:https://netlify.com/[Netlify]
-
-== Setup
+== Installation
 
 . Clone and install
 +
@@ -46,6 +62,8 @@ pnpm install
 GOOGLE_GENERATIVE_AI_API_KEY=YOUR_API_KEY
 GITHUB_TOKEN=YOUR_GH_TOKEN
 ----
+
+== Usage
 
 . Develop
 +
@@ -64,3 +82,10 @@ pnpm build
 == Changelog
 
 See link:CHANGELOG.adoc[CHANGELOG.adoc] for the project timeline.
+
+== Contact
+
+DevCentr.org — support@devcentr.org
+
+* Project: https://github.com/dev-centr/fixnow-dev
+* Site: https://devcentr.org
