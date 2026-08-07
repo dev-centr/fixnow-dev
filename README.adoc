@@ -3,19 +3,11 @@ ifndef::env-github[:icons: font]
 :toclevels: 2
 :sectanchors:
 
-ifndef::env-github[]
+[[readme-top]]
 image:https://img.shields.io/github/contributors/dev-centr/fixnow-dev.svg?style=for-the-badge[Contributors,link=https://github.com/dev-centr/fixnow-dev/graphs/contributors]
 image:https://img.shields.io/github/forks/dev-centr/fixnow-dev.svg?style=for-the-badge[Forks,link=https://github.com/dev-centr/fixnow-dev/network/members]
 image:https://img.shields.io/github/stars/dev-centr/fixnow-dev.svg?style=for-the-badge[Stars,link=https://github.com/dev-centr/fixnow-dev/stargazers]
 image:https://img.shields.io/github/issues/dev-centr/fixnow-dev.svg?style=for-the-badge[Issues,link=https://github.com/dev-centr/fixnow-dev/issues]
-endif::[]
-
-ifdef::env-github[]
-image:https://img.shields.io/github/contributors/dev-centr/fixnow-dev.svg?style=for-the-badge[Contributors]
-image:https://img.shields.io/github/forks/dev-centr/fixnow-dev.svg?style=for-the-badge[Forks]
-image:https://img.shields.io/github/stars/dev-centr/fixnow-dev.svg?style=for-the-badge[Stars]
-image:https://img.shields.io/github/issues/dev-centr/fixnow-dev.svg?style=for-the-badge[Issues]
-endif::[]
 
 = FixNow.dev
 
@@ -45,6 +37,8 @@ Canonical docs live on the Dev-Centr Antora hub:
 
 The deployed app also has an in-product `/docs` area for quick reference.
 
+link:#readme-top[back to top]
+
 == Installation
 
 . Clone and install
@@ -63,6 +57,8 @@ GOOGLE_GENERATIVE_AI_API_KEY=YOUR_API_KEY
 GITHUB_TOKEN=YOUR_GH_TOKEN
 ----
 
+link:#readme-top[back to top]
+
 == Usage
 
 . Develop
@@ -79,6 +75,8 @@ pnpm dev
 pnpm build
 ----
 
+link:#readme-top[back to top]
+
 == Changelog
 
 See link:CHANGELOG.adoc[CHANGELOG.adoc] for the project timeline.
@@ -89,3 +87,5 @@ DevCentr.org — support@devcentr.org
 
 * Project: https://github.com/dev-centr/fixnow-dev
 * Site: https://devcentr.org
+
+link:#readme-top[back to top]
