@@ -1,6 +1,5 @@
-name: fixnow-dev
-title: FixNow
+name: tools
+title: Tools
 version: ~
-start_page: ROOT:index.adoc
 nav:
-  - modules/ROOT/nav.adoc
+- modules/fixnow-dev/nav.adoc
