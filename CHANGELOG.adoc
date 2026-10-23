@@ -4,6 +4,11 @@
 Timeline of notable FixNow changes.
 Detailed notes live under link:changelog-details/[changelog-details/].
 
+== 2026-10-23 — Vite 7.3.7
+
+* Bumped direct dependency `vite` from 7.3.1 to 7.3.7 (patch releases within Vite 7).
+  No application API or route changes; lockfile-only transitive updates for the SolidStart build toolchain.
+
 == 2026-10-06 — Dependency refresh
 
 * Refreshed deprecated transitive `@ungap/structured-clone` to 1.4.0 within its existing range, and synced `pnpm-lock.yaml` with the `@chenglou/pretext` dependency already declared in `package.json`.
