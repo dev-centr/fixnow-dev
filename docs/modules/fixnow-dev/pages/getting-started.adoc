@@ -4,7 +4,7 @@
 
 == Requirements
 
-* Node.js 22 or newer
+* Node.js 22 or newer (`engines` in `package.json`; matches Vite 7 runtime support)
 * link:https://pnpm.io/[pnpm] (via Corepack is fine)
 * A Google AI Studio / Gemini API key for live scoring
 * Optional GitHub token for higher API rate limits when fetching issues
@@ -48,7 +48,7 @@ pnpm start
 ----
 
 Deployment is configured for Netlify (`netlify.toml`).
-The stack is SolidStart (Vinxi) with Tailwind CSS v4.
+The stack is SolidStart on link:https://vite.dev/[Vite] 7 with Tailwind CSS v4 (`vite.config.ts` wires `@solidjs/start` and `@tailwindcss/vite`).
 
 == First registration
 

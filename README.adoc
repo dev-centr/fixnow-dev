@@ -12,6 +12,9 @@ ifdef::env-github[]
 <a href="https://github.com/dev-centr/fixnow-dev/stargazers"><img src="https://img.shields.io/github/stars/dev-centr/fixnow-dev.svg?style=for-the-badge" alt="Stars"></a>
 <a href="https://github.com/dev-centr/fixnow-dev/issues"><img src="https://img.shields.io/github/issues/dev-centr/fixnow-dev.svg?style=for-the-badge" alt="Issues"></a>
 <br />
+<a href="https://docs.devcentr.org/tools/fixnow-dev/"><img src="https://img.shields.io/badge/Docs-Dev--Centr-0E6391?style=for-the-badge&logo=readthedocs&logoColor=white" alt="Docs | Dev-Centr"></a>
+<a href="https://github.com/dev-centr/fixnow-dev/actions/workflows/encoding-guard.yml"><img src="https://github.com/dev-centr/fixnow-dev/actions/workflows/encoding-guard.yml/badge.svg?style=for-the-badge" alt="Encoding guard CI"></a>
+<br />
 <h3 align="center">FixNow.dev</h3>
 <p align="center">
 Pressure-driven issue tracking for high-value, stagnated features.<br /><a href="https://docs.devcentr.org/tools/fixnow-dev/"><strong>Explore the docs ·</strong></a><br /><br />
@@ -28,6 +31,8 @@ image:https://img.shields.io/github/contributors/dev-centr/fixnow-dev.svg?style=
 image:https://img.shields.io/github/forks/dev-centr/fixnow-dev.svg?style=for-the-badge[Forks,link=https://github.com/dev-centr/fixnow-dev/network/members]
 image:https://img.shields.io/github/stars/dev-centr/fixnow-dev.svg?style=for-the-badge[Stars,link=https://github.com/dev-centr/fixnow-dev/stargazers]
 image:https://img.shields.io/github/issues/dev-centr/fixnow-dev.svg?style=for-the-badge[Issues,link=https://github.com/dev-centr/fixnow-dev/issues]
+image:https://img.shields.io/badge/Docs-Dev--Centr-0E6391?style=for-the-badge&logo=readthedocs&logoColor=white[Docs | Dev-Centr,link=https://docs.devcentr.org/tools/fixnow-dev/]
+image:https://github.com/dev-centr/fixnow-dev/actions/workflows/encoding-guard.yml/badge.svg?style=for-the-badge[Encoding guard CI,link=https://github.com/dev-centr/fixnow-dev/actions/workflows/encoding-guard.yml]
 
 = FixNow.dev
 
