@@ -4,6 +4,11 @@
 Timeline of notable FixNow changes.
 Detailed notes live under link:changelog-details/[changelog-details/].
 
+== 2026-11-05 — Transitive lodash 4.18.1
+
+* Bumped indirect `lodash` from 4.17.23 to 4.18.1 in `pnpm-lock.yaml` (via archiver and related Nitro/Vinxi dependencies).
+* Upstream includes hardening for `_.template` import validation and prototype-pollution paths in `baseUnset`; FixNow does not call lodash APIs directly.
+
 == 2026-10-06 — Dependency refresh
 
 * Refreshed deprecated transitive `@ungap/structured-clone` to 1.4.0 within its existing range, and synced `pnpm-lock.yaml` with the `@chenglou/pretext` dependency already declared in `package.json`.
