@@ -4,6 +4,11 @@
 Timeline of notable FixNow changes.
 Detailed notes live under link:changelog-details/[changelog-details/].
 
+== 2026-11-15 — Transitive node-forge 1.4.3
+
+* Bumped indirect `node-forge` from 1.3.3 to 1.4.3 in `pnpm-lock.yaml` (via `listhen`, pulled in by Nitro/Vinxi dev server tooling).
+* Upstream 1.4.3 addresses TLS client hardening, `forge.http` header parsing, X.509 name constraint enforcement, and Ed25519 verification edge cases; FixNow application code does not import `node-forge` directly.
+
 == 2026-10-06 — Dependency refresh
 
 * Refreshed deprecated transitive `@ungap/structured-clone` to 1.4.0 within its existing range, and synced `pnpm-lock.yaml` with the `@chenglou/pretext` dependency already declared in `package.json`.
